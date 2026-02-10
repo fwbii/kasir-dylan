@@ -1,0 +1,11 @@
+# Matikan fitur intip folder
+Options -Indexes
+
+# Paksa halaman utama ke index.php
+DirectoryIndex index.php
+
+# Proteksi file koneksi
+<Files "connect.php">
+    Order Allow,Deny
+    Deny from all
+</Files>

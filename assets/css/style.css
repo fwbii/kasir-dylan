@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-report {
+    border-radius: 15px;
+    border: none;
+}
+
+.table thead {
+    background-color: #1c78d3;
+}
+
+@media print {
+
+    .sidebar,
+    .btn-print,
+    .no-print {
+        display: none !important;
+    }
+
+    .container-fluid {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.produk-item:hover {
+    cursor: pointer;
+    border: 2px solid #95fd0d;
+}
+
+.keranjang-box {
+    position: sticky;
+    top: 20px;
+}
+
+@media print {
+
+    /* Sembunyikan SEMUA elemen kecuali area nota */
+    .sidebar,
+    .navbar,
+    .no-print,
+    .btn,
+    .card-header {
+        display: none !important;
+    }
+
+    /* Paksa container agar memenuhi layar */
+    .container-fluid,
+    .d-flex {
+        display: block !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .card {
+        width: 100% !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    /* Hilangkan margin default dari browser */
+    @page {
+        margin: 0.5cm;
+    }
+}
